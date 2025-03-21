@@ -1,0 +1,3 @@
+Adafruit CircuitPython 9.2.5 on 2025-03-19; LILYGO T-Deck (Plus) with ESP32S3
+Board ID:lilygo_tdeck
+UID:84AC34F27BCB
