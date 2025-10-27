@@ -175,10 +175,10 @@ class SX1262(SX126X):
             return state
 
     def recv(self, len=0, timeout_en=False, timeout_ms=0):
-        #if not self.blocking:
-        #    return self._readData(len)
-        #else:
-        return self._receive(len, timeout_en, timeout_ms)
+        if not self.blocking:
+            return self._readData(len)
+        else:
+            return self._receive(len, timeout_en, timeout_ms)
 
     def send(self, data):
         if not self.blocking:
