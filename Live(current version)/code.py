@@ -5,7 +5,7 @@ print(gc.mem_free())
 
 #Main setting of what the device is doing
 
-Mode = TDInput.TDInput("Input mode (0=Tx, 1=Rx, 2=RxScan, 3=Feather weight, 4=3D Range Test, 5=DisentanglementTest), 6=RangeTest:")
+Mode = TDInput.TDInput("Input mode (0=Tx, 1=Rx, 2=RxScan, 3=Feather weight, 4=3D Range Test, 5=DisentanglementTest), 6=RangeTest, 7=JustGPS:")
 if Mode =="0":
    Mode = "Tx"
 if Mode == "1":
@@ -18,9 +18,12 @@ if Mode == "3":
 if Mode == "4":
   Mode = "RangeTest3D"
 if Mode == "5":
-  Mode = "DisentanglementTest"
+  Mode = "BackPlane"
+  import BackPlane
 if Mode == "6":
    import RangeTest
+if Mode == "7":
+   import justGPS
    
 
 '''
